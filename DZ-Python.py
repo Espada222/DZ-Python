@@ -1,8 +1,12 @@
 def max_number(a, b):
-    if a > b:
-        return a
-    else:
-        return b
+    try:
+        if a > b:
+            return a
+        else:
+            return b
+    except TypeError:
+        print(f"Ошибка: оба аргумента должны быть числами. Получено: {type(a).__name__}, {type(b).__name__}")
+        return None
 
 
 def even_numbers(n):
@@ -30,10 +34,10 @@ if __name__ == "__main__":
 
     test_max_number()
 
-    result1 = max_number(2, 1)
-    result2 = max_number(1, 3)
-    print(f"Результат 1: {result1}")
-    print(f"Результат 2: {result2}")
+    result_1 = max_number(2, 1)
+    result_2 = max_number(1, 3)
+    print(f"Результат 1: {result_1}")
+    print(f"Результат 2: {result_2}")
 
     empty_function()
 
