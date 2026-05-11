@@ -2,15 +2,7 @@ age = int(input())
 is_citizen = input() == "True"
 disqualification = input() == "True"
 
-if age < 18:
-    print(False)
-    print("Причина: Слишком молод(а).")
-elif not is_citizen:
-    print(False)
-    print("Причина: Не гражданин (гражданка).")
-elif disqualification:
-    print(False)
-    print("Причина: Дисквалифицирован(а), есть уголовное наказание.")
+if age <= 18 and is_citizen and not disqualification:
+    print("Соответствует всем условиям.")
 else:
-    print(True)
-    print("Причина: Соответствует всем условиям.")
+    print("Не соответствует условиям")
