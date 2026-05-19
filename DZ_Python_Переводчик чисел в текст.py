@@ -1,22 +1,15 @@
 try:
     num = int(input("Введите число от 1 до 5: "))
-
-    if num == 1:
-        text = "One"
-    elif num == 2:
-        text = "Two"
-    elif num == 3:
-        text = "Three"
-    elif num == 4:
-        text = "Four"
-    elif num == 5:
-        text = "Five"
+    numbers = {
+        1: "One",
+        2: "Two",
+        3: "Three",
+        4: "Four",
+        5: "Five"
+    }
+    if num in numbers:
+        print(f"Соответствующее число: {numbers[num]}")
     else:
-        print(f"Ошибка: число {num} не входит в диапазон от 1 до 5. Программа завершена.")
-        text = None
-
-    if text:
-        print(f"Соответствующее число: {text}")
-
+        print(f"Ошибка: число {num} не входит в диапазон от 1 до 5")
 except ValueError:
     print("Ошибка: введите целое число. Программа завершена.")
