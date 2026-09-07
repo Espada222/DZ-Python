@@ -1,10 +1,11 @@
 password = "Qwerty123"
 
-while True:
-    user = input("Введите пароль:")
+user_input = ""
 
-    if user == password:
+while user_input != password:
+    user_input = input("Введите пароль:")
+
+    if user_input == password:
         print("Верный пароль")
-        break
     else:
         print("Неверный пароль")
